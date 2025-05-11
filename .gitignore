@@ -1,0 +1,22 @@
+# バイナリデータ
+*.npy
+*.npz
+*.dat
+*.bin
+
+# モデル・チェックポイント
+*.pt
+*.pth
+
+# ログや出力
+*.log
+outputs/
+results/
+
+# Jupyter Notebook チェックポイント
+.ipynb_checkpoints/
+
+# OSやIDE関連
+.DS_Store
+*.swp
+.vscode/
