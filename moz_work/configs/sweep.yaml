@@ -1,0 +1,23 @@
+defaults:
+- _self_
+- test  # test.yamlを継承（共通設定利用）
+
+
+hydra:
+  sweeper:
+    params:
+      val_anno:
+        - /workspace/OpenFWI-main/split_files/flatfault_a_val.txt
+        - /workspace/OpenFWI-main/split_files/flatfault_b_val.txt
+        - /workspace/OpenFWI-main/split_files/curvefault_a_val.txt
+        - /workspace/OpenFWI-main/split_files/curvefault_b_val.txt
+        - /workspace/OpenFWI-main/split_files/flatvel_a_val.txt
+        - /workspace/OpenFWI-main/split_files/flatvel_b_val.txt
+        - /workspace/OpenFWI-main/split_files/curvevel_a_val.txt
+        - /workspace/OpenFWI-main/split_files/curvevel_b_val.txt
+        - /workspace/OpenFWI-main/split_files/style_a_val.txt
+        - /workspace/OpenFWI-main/split_files/style_b_val.txt
+
+      resume:
+        - /workspace/OpenFWI-main/moz_work/Invnet_models/fcn_l1loss_ffb/checkpoint.pth
+        - /workspace/OpenFWI-main/moz_work/Invnet_models_bigfwi/fcn_l1loss_ffb/checkpoint.pth

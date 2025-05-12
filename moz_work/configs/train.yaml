@@ -1,0 +1,34 @@
+# configs/train.yaml
+defaults:
+  - base
+
+# 学習ファイル
+val_anno: bigfwi_val.txt
+
+# 学習設定
+batch_size: 256
+lr: 0.0001
+lr_milestones: []
+momentum: 0.9
+weight_decay: 0.0001
+lr_gamma: 0.1
+lr_warmup_epochs: 0
+epoch_block: 40
+num_block: 3
+print_freq: 50
+resume: null
+start_epoch: 0
+flip: True
+shot_drop: True
+
+# 損失係数
+lambda_g1v: 1.0
+lambda_g2v: 1.0
+
+# 分散学習
+sync_bn: false
+world_size: 1
+dist_url: env://
+
+# ログ
+tensorboard: true

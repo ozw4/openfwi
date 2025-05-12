@@ -1,0 +1,26 @@
+# configs/base.yaml
+defaults:
+  - _self_
+
+# デバイス・データセット
+device: cuda
+dataset: bigfwi
+file_size: null
+
+# パス関連（共通部分）
+anno_path: /workspace/OpenFWI-main/split_files
+save_name: flip_shotdrop
+suffix: null
+
+# モデル関連（共通部分）
+model: InversionNet
+up_mode: nearest
+sample_spatial: 1.0
+sample_temporal: 1
+norm: bn  # CNNの場合必要
+
+# 一般設定
+workers: 16
+k: 1.0
+
+train_anno: bigfwi_train.txt
